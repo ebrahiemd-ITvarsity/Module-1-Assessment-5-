@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
+          
+          <div style="background-image: url('images/avengers%20wall%20paper.jpg');">
+          
+          <div id="menu">
+     <a href="index.html">Home</a>
+     <a href="about%20us.html">About Us</a>
+     <a href="contact%20us.html">Contact</a>
+</div>
+           <br/><br/>
+          
+          <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <a href="avengers-1.html"><img src="images/avengers_01.jpg" style="width:100%"></a>
+  <div class="text">Thor</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+   <a href="avengers-2.html"><img src="images/avengers_02.jpg" style="width:100%"></a>
+  <div class="text">Iron Man</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+   <a href="avengers-3.html"><img src="images/avengers_03.jpg" style="width:100%"></a>
+  <div class="text">Hulk</div>
+</div>
+              
+              <div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <a href="avengers-4.html"> <img src="images/avengers_04.jpg" style="width:100%"></a>
+  <div class="text">Hawkeye</div>
+</div>
+              
+                <div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+   <a href="avengers-5.html"><img src="images/avengers_05.jpg" style="width:100%"></a>
+  <div class="text">Captain America</div>
+</div>
+              
+               <div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+   <a href="avengers-6.html"><img src="images/avengers_06.jpg" style="width:100%"></a>
+  <div class="text">Black Widow</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+              
+            <center> <h1 style="background-color:white;">Choose your character</h1></center> 
+              
+          </div>
+
+      </body>
+</html>
